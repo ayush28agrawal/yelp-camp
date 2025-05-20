@@ -70,9 +70,12 @@ const sessionConfig = {
         maxAge:1000*60*60*24*7
     }
 }
+app.set('trust proxy', 1);
+
 app.use(session(sessionConfig))
 app.use(flash())
 app.use(helmet())
+
 
 const scriptSrcUrls = [
     "https://stackpath.bootstrapcdn.com/",
